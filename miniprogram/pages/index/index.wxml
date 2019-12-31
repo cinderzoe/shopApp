@@ -1,0 +1,51 @@
+<import src="../list/list" />
+<view class="index_container">
+  <swiper class="head_swiper" indicator-dots="{{headDots}}" indicator-color="{{dotColor}}" indicator-active-color="{{dotActiveColor}}">
+    <block wx:for="{{headImgItem}}">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="recommend public">
+    <view class="wrap">
+      <view class="re_title">
+        <text class="tit">人气推荐</text>
+        <text class="more" bindtap="gotoPublic">更多</text>
+      </view>
+    </view>
+    <view class="recommend_list">
+      <template is="listTempalte" data="{{listContents:listContentsPublic}}" />
+      <!-- <view wx:for="{{recomPublicList}}" class="recommend_items" bindtap="gotoDetail">
+        <view class="img"><image src="{{item.imgSrc}}"></image></view>
+        <text>{{item.text}}</text>
+        <view class="primeInfo">
+          <view class="unitprice">￥{{item.prime}}</view>
+          <view class="sales">销量{{item.sales}}</view>
+        </view>
+      </view> -->
+    </view>
+  </view>
+  <view class="recommend hot">
+    <view class="wrap">
+      <view class="re_title">
+        <text class="tit">热销榜单</text>
+        <text class="more" bindtap="gotoHot">更多</text>
+      </view>
+    </view>
+    <view class="recommend_list">
+      <template is="listTempalte" data="{{listContents:listContentsHot}}" />
+      <!-- <view wx:for="{{recomHotList}}" class="recommend_items" bindtap="gotoDetail">
+        <view class="img">
+          <image src="{{item.imgSrc}}"></image>
+        </view>
+        <text>{{item.text}}</text>
+        <view class="primeInfo">
+          <view class="unitprice">￥{{item.prime}}</view>
+          <view class="sales">销量{{item.sales}}</view>
+        </view>
+      </view> -->
+    </view>
+  </view>
+  <view class="bottom_tips">没有更多商品了~</view>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/addAddr/addAddr.wxml-->
+
+<template name="addressInfo">
+  <view class="noaddress-layOut" wx:if="{{showAddBtn}}">
+    <view class="wrap">
+      <view class="noaddress-layIn">
+        <view class="add-btn" bindtap="addAddress">添加地址</view>
+      </view>
+    </view>
+  </view>
+  <view class="hasaddress-layout" wx:else>
+    <view class="wrap">
+      <view class="hasaddress-layIn">
+        <view class="addr-info clearfix" bindtap="gotoAddrList">
+          <view class="row row-name">
+            <view class="row-in">收货人:</view>
+            <view class="input-info-name">{{buyername}}</view>
+          </view>
+          <view class="row row-mobile">
+            <view class="input-info-mobile">{{buyermobile}}</view>
+          </view>
+          <view class="row clearfix row-address">
+            <view class="row-in">收货地址:</view>
+            <view class="input-info-address">{{buyeraddress}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,11 @@
+/* pages/successPay/successPay.wxss */
+.successPay{background-color: #fff;height: 100vh;}
+.successPay-part1{text-align: center;border-bottom: 20rpx solid #F5F5F5;padding-top: 60rpx;}
+.success-txt{display: inline-block;padding-left: 104rpx;font-size: 36rpx;line-height: 70rpx;height: 70rpx;background-position: left center;background-repeat: no-repeat;background-size: 70rpx 70rpx;}
+.btn{padding: 80rpx 0 52rpx;}
+.success-btn{font-size: 34rpx;color: #FF6248;border: 1px solid #FF6248;width: 300rpx;height: 80rpx;line-height: 80rpx;box-sizing: border-box;border-radius: 50rpx;display: inline-block;margin: 0 10px;}
+.success-btn.check{background-color: #FF6248;color: #fff;}
+.successPay-part2{padding: 35rpx 0;}
+.order-list{font-size: 26rpx;line-height: 36rpx;padding: 5rpx 0;}
+.order-list .attr{float: left;}
+.order-list .cont{float: right;}

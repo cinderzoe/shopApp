@@ -1,0 +1,9 @@
+/* pages/shopCar/shopCar.wxss */
+@import "../templateShop/templateShop.wxss";
+@import "../list/list.wxss";
+.shopCar-layout,.list-box{background-color: #fff;}
+.sort_tit{font-size: 24rpx;color: #757575;text-align: center;position: relative;margin-top: 48rpx;border-top: 1px solid #F0F0F0;padding: 20rpx 0;}
+.sort_tit::after,.sort_tit::before{content: '';display: block;position: absolute;width: 60rpx;height: 1px;background-color: #D8D8D8;top: 50%;left: 50%;}
+.sort_tit::after{margin-left: 70rpx;}
+.sort_tit::before{margin-left: -133rpx;}
+

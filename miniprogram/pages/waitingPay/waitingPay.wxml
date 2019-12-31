@@ -1,0 +1,39 @@
+<!--pages/waitingPay/waitingPay.wxml-->
+<view class="waitingPay">
+  <view class="wait-part1">
+    <view class="wrap">
+      <view class="txt">支付剩余时间</view>
+      <view class="remain-time">
+        <view class="time-box">3</view>
+        <view class="time-box">0</view>
+        <view class="mh">:</view>
+        <view class="time-box">0</view>
+        <view class="time-box">0</view>
+      </view>
+    </view>
+  </view>
+  <view class="wait-part2">
+    <view class="wrap">
+      <view class="list clearfix">
+        <view class="attr">订单编号</view>
+        <view class="cont">{{orderId}}</view>
+      </view>
+      <view class="list prime-list clearfix">
+        <view class="attr">订单总价</view>
+        <view class="cont">￥{{orderPrime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="wait-part3">
+    <view class="wrap">
+      <view class="payment-method">
+        <view class="title">选择支付方式</view>
+        <view class="method-list clearfix {{currentBtn?'active':''}}" bindtap="payMethod">
+          <view class="method-name" style="background-image:url(../../images/wechat.png)">微信支付</view>
+          <view class="select-btn"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="pay-btn" bindtap="payment">确认支付</view>

@@ -1,0 +1,61 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<import src="../addAddr/addAddr.wxml" />
+<template name="orderDetail">
+  <view class="notPay">
+    <view class="remainTime">
+      <view class="order-attr">{{orderInfo.orderName}}</view>
+      <view class="txt">{{orderInfo.orderTips}}</view>
+      <image class="img" src="{{orderInfo.backgroundImg}}" mode="widthFix"></image>
+    </view>
+    <view class="logistics" wx:if="{{orderInfo.logistics}}" bindtap="{{orderInfo.logistics.action}}">
+      <view class="wrap">
+        <view class="txt" style="background-image:url(../../images/logistics.png)">{{orderInfo.logistics.currentStatus}}</view>
+        <view class="time">{{orderInfo.logistics.statusTime}}</view>
+      </view>
+    </view>
+    <view class="address">
+      <template is="addressInfo" data="{{showAddBtn,buyername,buyermobile,buyeraddress}}"></template>
+    </view>
+    <view class="list-arr">
+      <view class="wrap">
+        <view class="title">订单详情</view>
+        <view class="pro-info clearfix" wx:for="{{orderInfo.proList}}" wx:for-item="itemPro">
+          <view class="img" style="background-image:url(../../images/Rectangle_22.png)"></view>
+          <view class="info">
+            <view class="info-name">{{itemPro.txt}}</view>
+            <view class="info-attr">{{itemPro.attr}}</view>
+            <view class="bottom">
+              <view class="info-prime">￥{{itemPro.unitPrice}}</view>
+              <view class="info-quantity">X{{itemPro.num}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="tips clearfix">
+          <view class="attr">发货方式</view>
+          <view class="cont">快递 ￥{{orderInfo.sendMethod}}</view>
+        </view>
+        <view class="tips clearfix tips-prime">
+          <view class="attr">共2件商品</view>
+          <view class="cont">需付款：￥{{orderInfo.totalPrime}}</view>
+        </view>
+        <view class="tips clearfix">
+          <view class="attr">客户留言</view>
+          <view class="cont">{{orderInfo.leaveWord}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="order-bottom">
+      <view class="wrap">
+        <view class="tips clearfix" wx:for="{{orderInfo.moreInfo}}" wx:for-item="moreItem">
+          <view class="attr">{{moreItem.name}}</view>
+          <view class="cont">{{moreItem.content}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="order-btn" wx:if="{{orderInfo.editBtn}}">
+      <view class="wrap">
+        <view class="edit-btn {{itemBtn.className}}" wx:for="{{orderInfo.editBtn}}" wx:for-item="itemBtn" bindtap="{{itemBtn.action}}">{{itemBtn.name}}</view>
+      </view>
+    </view>
+  </view>
+</template>

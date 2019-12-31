@@ -1,0 +1,13 @@
+<!--pages/shopCar/shopCar.wxml-->
+<import src="../templateShop/templateShop.wxml" />
+<import src="../list/list.wxml" />
+<view class="shopCar-layout" wx:if="{{shopCarLists.length!==0}}">
+  <template is="hasProduct" data="{{shopCarLists,selectAll,totalPrime}}"></template>
+</view>
+<view class="shopCar-empty" wx:else>
+  <template is="noProduct"></template>
+  <view class="list-box">
+    <view class="sort_tit">猜你喜欢</view>
+    <template is="listTempalte" data="{{listContents}}"></template>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/successPay/successPay.wxml-->
+<view class="successPay">
+  <view class="successPay-part1">
+    <view class="wrap">
+      <view class="success-txt" style="background-image:url(../../images/success.png)">交易成功</view>
+      <view class="btn">
+        <view class="success-btn back" bindtap="goBack">返回首页</view>
+        <view class="success-btn check" bindtap="gotoOrder">查看订单</view>
+      </view>
+    </view>
+  </view>
+  <view class="successPay-part2">
+    <view class="wrap">
+      <view class="order-list clearfix">
+        <view class="attr">订单编号</view>
+        <view class="cont">{{totalInfo.orderId}}</view>
+      </view>
+      <view class="order-list clearfix">
+        <view class="attr">支付流水号</view>
+        <view class="cont">{{paymentId}}</view>
+      </view>
+      <view class="order-list clearfix">
+        <view class="attr">下单时间</view>
+        <view class="cont">{{payTime}}</view>
+      </view>
+      <view class="order-list clearfix">
+        <view class="attr">支付方式</view>
+        <view class="cont">{{totalInfo.payMethod}}</view>
+      </view>
+      <view class="order-list clearfix">
+        <view class="attr">订单总价</view>
+        <view class="cont">￥ {{totalInfo.totalFare}}</view>
+      </view>
+    </view>
+  </view>
+  <image src="../../images/Unsplash_photo.png" mode="widthFix" style="width:100%;"></image>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/bindTelephone/bindTelephone.wxml-->
+<view class="bind-telephone">
+  <view class="telephone-in">
+    <view class="input-list mobile clearfix" style="background-image:url(../../images/mobile.svg)">
+      <input placeholder="请输入手机号码" bindinput="getMobile"></input>
+    </view>
+    <view class="input-list code clearfix" style="background-image:url(../../images/code.svg)">
+      <input placeholder="请输入验证码" bindinput="getCode" class="get-code"></input>
+      <button class="send-code" bindtap="sendCode" disabled="{{disabledBtn}}">{{codeValue}}</button>
+    </view>
+    <view class="tips {{agreeTreaty?'active':''}}" bindtap="agreeOn">我已同意并阅读
+      <view class="declare">《用户服务协议以及法律声明》</view>
+    </view>
+    <view class="define-btn" bindtap="checked">确定</view>
+  </view>
+</view>

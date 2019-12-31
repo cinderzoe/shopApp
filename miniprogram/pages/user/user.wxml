@@ -1,0 +1,44 @@
+<view class="user-layout">
+  <view class="user-part1">
+    <view class="wrap">
+      <view class="user-info clearfix">
+        <view class="info-img fl" style="background-image:url(../../images/touxiang.png)"></view>
+        <view class="fl">
+          <view class="info-name">HELEN</view>
+          <view class="info-mobile">18873434334</view>
+        </view>
+      </view>
+      <view class="orders clearfix">
+        <view class="order-txt">订单中心</view>
+        <view class="order-btn" bindtap="gotoOrders">全部订单</view>
+      </view>
+    </view>
+  </view>
+  <view class="user-part2">
+    <view class="wrap">
+      <view class="order-list">
+        <view class="list-items" wx:for="{{listItems}}" bindtap="{{item.method}}">
+          <view class="items-img" style="background-image:url({{item.img}})"></view>
+          <view class="items-number">{{item.number}}</view>
+          <view class="items-txt">{{item.txt}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="user-part3">
+    <view class="wrap">
+      <view class="select-list">
+        <view class="select-items clearfix select-none" bindtap="gotoReference">
+          <view class="txt">我的推荐人</view>
+          <view class="info">Helen</view>
+        </view>
+        <view class="select-items clearfix" bindtap="gotoAddress">
+          <view class="txt">我的地址</view>
+        </view>
+        <view class="select-items clearfix" bindtap="gotoService">
+          <view class="txt">客服</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

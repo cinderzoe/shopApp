@@ -1,0 +1,98 @@
+<view class="prodetail_container">
+  <view class="head_contain">
+    <swiper indicator-dots="{{swiperDot}}" indicator-color="{{dotColor}}" indicator-active-color="{{dotActiveColor}}" class="prodetail_swiper">
+      <block wx:for="{{head_swiper}}">
+        <swiper-item class="list" style="background-image:url({{item}})"></swiper-item>
+      </block>
+    </swiper>
+    <view class="infoDetail" id="infoDetail" bindtap="scroll">图文详情</view>
+  </view>
+  <view class="prodetail_part1 wrap">
+    <view class="pro_contents clearfix">
+      <text class="txt">{{proConents}}</text>
+      <view class="ewm">
+        <image src="{{ewm}}" class="img" bindtap="showPop"></image>
+        <view class="ewm_ture" wx:if="{{show}}">
+          <view class="pop_wrap">
+            <view class="ewm_pop">
+              <view class="close_btn" bindtap="closePop" style="background-image:url(../../images/cha-4.png)"></view>
+              <view class="tit">商品二维码</view>
+              <image class="pro_img" src="{{head_swiper[0]}}" mode="widthFix"></image>
+              <view class="ewm_info clearfix">
+                <image class="ewm_img" src="{{ewmImg}}" mode="widthFix"></image>
+                <view class="txt">
+                  <text>扫码二维码查看更多详情</text>
+                  <text>长按图片保存二维码</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="prime clearfix">
+      <view class="current">￥
+        <view class="current_txt">{{currentPrime}}</view>
+      </view>
+      <view class="old">￥{{oldPrime}}</view>
+    </view>
+    <view class="tips clearfix">
+      <view class="addrss_form">至{{addressFrom}}</view>
+      <view class="fare">运费：<view wx:if="{{proFare}}">{{proFare}}元</view><view wx:else>免运费</view></view>
+      <view class="sales">销量 {{saleNum}}</view>
+    </view>
+  </view>
+  <view class="prodetail_part2 wrap">
+    <view class="nearShebei" bindtap="gotoEquip" style="background-image: url(../../images/Path_2.png);">
+      <image src="../../images/fuwuqi.png" class="icon"></image>附近在售设备
+    </view>
+  </view>
+  <view class="prodetail_part3" id="prodetail_part3">
+    <view class="pro_content_titi">宝贝详情</view>
+    <view class="pro_content_in">
+      <block wx:for="{{contentSrc}}">
+        <image src="{{item}}" class="img" mode="widthFix"></image>
+      </block>
+    </view>
+  </view>
+  <view class="botton_nav">
+    <view class="fix_plate plate1 plate_small active" bindtap="gotoIndex" style="background-image:url(../../images/tabBar/shouye2.png)">首页</view>
+    <view class="fix_plate plate2 plate_small" style="background-image:url(../../images/share.png)">分享</view>
+    <view class="fix_plate plate3 plate_small" bindtap="gotoShopCar" style="background-image:url(../../images/tabBar/gouwuche.png)">购物车</view>
+    <view class="fix_plate plate4 palte_big" bindtap="joinShopCar">加入购物车</view>
+    <view class="fix_plate plate5 palte_big" bindtap="orderNow">立即购买</view>
+  </view>
+  <view class="join_pop" wx:if="{{animation_box}}"> //wx:if="{{showJoin}}"
+    <view class="join_contents" animation='{{animationData}}'>
+      <view class="pop_wrap">
+        <view class="pop_close_btn" bindtap="closeJoinPop" style="background-image:url(../../images/close_btn.png)"></view>
+        <view class="join_part1 part clearfix">
+          <view class="img" style="background-image:url({{showPopSrc}})"></view>
+          <view class="text">
+            <view class="pop_prime">
+              <text class="last">￥{{currentPrime}}</text>
+              <text class="old">￥{{oldPrime}}</text>
+            </view>
+            <view class="total_num">库存{{totalNum}}件</view>
+          </view>
+        </view>
+        <view class="join_part2 part" wx:for="{{sortSelect}}" wx:for-item="items" wx:for-index="indexs">
+          <view class="clearfix">
+            <view class="{{sortSelect[indexs].btn[selfindex]?'sort_list current':'sort_list'}}" bindtap="selectList" data-id="{{indexs}}" data-value="{{selfindex}}" data-txt="{{selfitem}}" wx:for="{{items.attr}}" wx:for-item="selfitem" wx:for-index="selfindex">{{selfitem}}
+            </view>
+          </view>
+        </view>
+        <view class="join_part3 part clearfix">
+          <text class="quantity">数量</text>
+          <view class="quantity_change">
+            <view class="cut_btn btn" bindtap="cutNum">-</view>
+            <input class="num_box" bindinput="numChange" bindblur="checkNum" type="number" value="{{currentNum}}"></input>
+            <view class="add_btn btn" bindtap="addNum">+</view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{joinOrBuy}}" class="join_btn" bindtap="joinCarBtn">加入购物车</view>
+      <view wx:else class="join_btn" bindtap="payNow">立即购买</view>
+    </view>
+  </view>
+</view>

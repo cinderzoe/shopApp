@@ -1,0 +1,33 @@
+<!--pages/templateOrderShow/templateOrderShow.wxml-->
+<template name="orderShow">
+<view class="orderShow">
+<view class="order-layout" wx:for="{{selectOrderInfo}}">
+  <view class="wrap">
+    <view class="order-top clearfix">
+      <view class="order-sort">{{item.attr}}</view>
+      <view class="order-paytime">订单时间：{{item.payTime}}</view>
+    </view>
+    <view class="order-list">
+      <view class="pro-info clearfix" wx:for="{{item.proList}}" wx:for-item="itemPro">
+        <view class="img" style="background-image:url(../../images/Rectangle_22.png)"></view>
+        <view class="info">
+          <view class="info-name">{{itemPro.txt}}</view>
+          <view class="info-attr">{{itemPro.attr}}</view>
+          <view class="bottom">
+            <view class="info-prime">￥{{itemPro.unitPrice}}</view>
+            <view class="info-quantity">X{{itemPro.num}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="order-bottom clearfix">
+      <view class="order-num">共{{item.proNum}}件商品</view>
+      <view class="order-prime">订单总价：<view class="prime-in">￥{{item.totalPrime}}</view></view>
+    </view>
+    <view class="order-btn" wx:if="{{item.editBtn}}">
+      <view class="edit-btn {{itemBtn.className}}" wx:for="{{item.editBtn}}" wx:for-item="itemBtn" bindtap="{{itemBtn.action}}">{{itemBtn.name}}</view>
+    </view>
+  </view>
+  </view>
+</view>
+</template>

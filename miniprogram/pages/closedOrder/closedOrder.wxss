@@ -1,0 +1,2 @@
+/* pages/closedOrder/closedOrder.wxss */
+@import "../orderDetail/orderDetail.wxss"

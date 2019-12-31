@@ -1,0 +1,4 @@
+<!--pages/alreadySend/alreadySend.wxml-->
+<import src="../orderDetail/orderDetail.wxml" />
+<template is="orderDetail" data="{{showAddBtn,buyername,buyermobile,buyeraddress,orderInfo}}"/>
+

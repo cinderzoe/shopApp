@@ -1,0 +1,40 @@
+<!--pages/address/address.wxml-->
+<view class="addr-form">
+  <view class="wrap">
+    <view class="form-box">
+      <view class="row">
+        <view class="txt">收货人</view>
+        <view class="write">
+          <input placeholder="请输入姓名" value="{{addressInfo.name}}" bindinput="inputName"></input>
+        </view>
+      </view>
+      <view class="row">
+        <view class="txt">联系电话</view>
+        <view class="write">
+          <input placeholder="请输入手机号码" value="{{addressInfo.mobile}}" bindinput="inputMobile"></input>
+        </view>
+      </view>
+      <view class="row">
+        <view class="txt">所在地区</view>
+        <view class="write">
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+              <view class="picker">
+                <view class="btn {{region[0]?'btn-no':'btn-yes'}}">{{region[0]?region[0]:'请选择'}}</view> {{region[1]}} {{region[2]}}
+              </view>
+            </picker>
+        </view>
+      </view>
+      <view class="row">
+        <view class="write addr-write">
+          <input placeholder="请输入详细地址" value="{{addressInfo.address}}" bindinput="inputAddr"></input>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="row default-btn {{choiceBtn?'choice':''}}" bindtap="choiceDefault">
+  <view class="wrap">
+    <view class="write addr-write">设置为默认地址</view>
+  </view>
+</view>
+<view class="save-btn" bindtap="check">保存</view>

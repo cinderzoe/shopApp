@@ -1,0 +1,17 @@
+<!--pages/detailList/detailList.wxml-->
+
+<!-- <view class="list_container">
+  <view class="wrap">
+    <view class="list" wx:for="{{listContents}}" bindtap="gotoProDetail">
+      <view class="list_img"><image src="{{item.src}}"></image></view>
+      <view class="list_contents clearfix">
+        <view class="list_txt">{{item.txt}}</view>
+        <view class="list_prime">￥{{item.prime}}</view>
+        <view class="list_sales">销量{{item.sales}}</view>
+      </view>
+    </view>
+  </view>
+</view> -->
+<import src="../list/list.wxml" />
+<template is="listTempalte" data="{{listContents}}"></template>
+

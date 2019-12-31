@@ -1,0 +1,21 @@
+/* pages/templateOrderShow/templateOrderShow.wxss */
+.order-layout{margin-bottom: 20rpx;background-color: #fff;}
+.order-top{padding: 28rpx 0;line-height: 42rpx;}
+.order-sort{float: left;font-size: 30rpx;color: #FF6248;}
+.order-paytime{float: right;color: #BFBFBF;font-size: 24rpx;}
+.pro-info{padding: 34rpx 0;border-top: 1px solid #F0F0F0;display: flex;}
+.list-arr{display: block;overflow: hidden;height: 480rpx;}
+.pro-info .img{height: 160rpx;float: left;flex: 160rpx 0 0;background-position: center;background-size: cover;background-repeat: no-repeat;}
+.info{margin-left: 20rpx;flex: 1;}
+.info-name{font-size: 30rpx;color: #333333;height: 42rpx;line-height: 42rpx;overflow: hidden;}
+.info-attr{color: #BCBCBC;font-size: 26rpx;line-height: 36rpx;margin-top: 10rpx;}
+.info .bottom{margin-top: 30rpx;}
+.info-prime{color: #FF6248;font-size: 30rpx;line-height: 42rpx;float: left;}
+.info-quantity{color: #BCBCBC;font-size: 26rpx;float: right;line-height: 42rpx;}
+.order-bottom{line-height: 42rpx;font-size: 30rpx;padding: 28rpx 0;}
+.order-num{float: left;color: #BCBCBC;}
+.order-prime{float: right;}
+.prime-in{color: #FF6248;display: inline-block;}
+.order-btn{border-top: 1px solid #F0F0F0;text-align: right;padding: 24rpx 0;}
+.edit-btn{display: inline-block;width: 136rpx;height: 50rpx;line-height: 50rpx;text-align: center;border-radius: 26rpx;border: 1px solid #BCBCBC;color: #666666;font-size: 24rpx;}
+.pay-btn{background-color: #FF6248;border-color: #FF6248;color: #fff;margin-left: 20rpx;}

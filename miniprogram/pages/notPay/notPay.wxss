@@ -1,0 +1,2 @@
+/* pages/notPay/notPay.wxss */
+@import "../orderDetail/orderDetail.wxss"

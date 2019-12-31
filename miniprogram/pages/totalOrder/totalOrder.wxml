@@ -1,0 +1,12 @@
+<!--pages/totalOrder/totalOrder.wxml-->
+<import src="../templateOrderShow/templateOrderShow" />
+<view class="totalOrder">
+  <view class="order-nav">
+    <view class="wrap">
+      <view class="nav">
+        <view class="nav-list {{item.hasActive?'active':''}}" wx:for="{{orderNav}}" bindtap="{{item.action}}" data-index="{{index}}">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <template is="orderShow" data="{{selectOrderInfo}}"/>
+</view>

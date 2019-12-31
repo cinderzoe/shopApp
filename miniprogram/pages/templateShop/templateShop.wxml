@@ -1,0 +1,46 @@
+<!--pages/templateShop/templateShop.wxml-->
+<template name="noProduct">
+  <view class="empty_shopcar">
+    <image class="empty_img" src="../../images/2222.png" mode="widthFix"></image>
+    <view class="empty_txt">您的购物车空空如也</view>
+    <view class="shop_btn" bindtap="gotoList">去逛一逛</view>
+  </view>
+</template>
+<template name="hasProduct">
+  <view class="shopcar_container">
+    <view class="shopcar_contents">
+      <view class="shopcar_list" wx:for="{{shopCarLists}}">
+        <view class="wrap">
+          <view class="{{item.selectSelf?'list_content clearfix':'list_content clearfix remove'}}" bindtap="selectList" data-id="{{index}}" data-select="{{item.selectSelf}}">
+            <image class="select_radio"></image>
+            <view class="shopcar_img" style="background-image:url({{item.img}})"></view>
+            <view class="shopcar_info">
+              <view class="info_top">
+                <view class="txt">{{item.txt}}</view>
+                <view class="attr">{{item.attr}}</view>
+              </view>
+              <view class="info_bottom clearfix">
+                <view class="prime">￥{{item.unitPrice}}</view>
+                <view class="num_box">
+                  <view class="cut_btn btn" catchtap="cutNum" data-index="{{index}}"></view>
+                  <input class="num_change" disabled type="number" value="{{item.num}}"></input>
+                  <view class="add_btn btn" catchtap="addNum" data-index="{{index}}"></view>
+                </view>
+              </view>
+            </view>
+            <view class="delete_btn" data-index="{{index}}" catchtap="deletePro" style="background-image:url(../../images/lajitong.png)"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="total_box">
+      <view class="wrap clearfix">
+        <view class="{{selectAll?'select_all all':'select_all'}}" bindtap="changeAll">全选</view>
+        <view class="total_prime">
+          <view class="prime">总价 ￥{{totalPrime}}</view>
+          <view class="pay_btn" bindtap="gotoOrder">结算</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

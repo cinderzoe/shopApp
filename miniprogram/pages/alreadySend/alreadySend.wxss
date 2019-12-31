@@ -1,0 +1,2 @@
+/* pages/alreadySend/alreadySend.wxss */
+@import "../orderDetail/orderDetail.wxss"

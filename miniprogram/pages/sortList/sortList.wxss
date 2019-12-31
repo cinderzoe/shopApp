@@ -1,0 +1,2 @@
+/* pages/sortList/sortList.wxss */
+@import "../list/list.wxss"

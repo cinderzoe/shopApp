@@ -1,0 +1,96 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sort/sort",
+    "pages/equipment/equipment",
+    "pages/shopCar/shopCar",
+    "pages/user/user",
+    "pages/productDetail/productDetail",
+    "pages/list/list",
+    "pages/templateShop/templateShop",
+    "pages/detailList/detailList",
+    "pages/order/order",
+    "pages/orderProList/orderProList",
+    "pages/address/address",
+    "pages/addAddr/addAddr",
+    "pages/addrList/addrList",
+    "pages/sortList/sortList",
+    "pages/waitingPay/waitingPay",
+    "pages/successPay/successPay",
+    "pages/templateOrderShow/templateOrderShow",
+    "pages/totalOrder/totalOrder",
+    "pages/notPay/notPay",
+    "pages/orderDetail/orderDetail",
+    "pages/notSend/notSend",
+    "pages/alreadySend/alreadySend",
+    "pages/finishOrder/finishOrder",
+    "pages/closedOrder/closedOrder",
+    "pages/logistics/logistics",
+    "pages/bindTelephone/bindTelephone"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/cfs/",
+      "pages": [
+        "main",
+        "query/main",
+        "photograph/main",
+        "packing/main",
+        "pin/main",
+        "pin/detail/main"
+      ]
+    },
+    {
+      "root": "pages/check/",
+      "pages": [
+        "main",
+        "detail/main"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundColor": "gba(245,245,245,1)",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ffc000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabBar/shouye1.png",
+        "selectedIconPath": "images/tabBar/shouye2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/sort/sort",
+        "iconPath": "images/tabBar/fenlei.png",
+        "selectedIconPath": "images/tabBar/fenlei1.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/equipment/equipment",
+        "iconPath": "images/tabBar/shebei.png",
+        "selectedIconPath": "images/tabBar/shebei3.png",
+        "text": "附近设备"
+      },
+      {
+        "pagePath": "pages/shopCar/shopCar",
+        "iconPath": "images/tabBar/gouwuche.png",
+        "selectedIconPath": "images/tabBar/gouwuche1.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/tabBar/wode-3.png",
+        "selectedIconPath": "images/tabBar/wode-2.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

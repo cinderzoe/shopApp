@@ -1,0 +1,22 @@
+<view class="sort_container">
+  <view class="wrap">
+    <view class="sort_part1 clearfix">
+      <view class="sort_tit">独家甄选</view>
+      <view class="sort_contents">
+        <view class="sort_list" wx:for="{{sortCoents}}" bindtap="gotolist">
+          <view class="list_icon" style="background-image:url({{item.src}})"></view>
+          <view class="list_txt">{{item.txt}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="sort_part2 clearfix">
+      <view class="sort_tit">热门专场</view>
+      <view class="sort_contents">
+        <view class="sort_list" wx:for="{{sortCoents}}" bindtap="gotolist">
+          <view class="list_icon" style="background-image:url({{item.src}})"></view>
+          <view class="list_txt">{{item.txt}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,2 @@
+/* pages/finishOrder/finishOrder.wxss */
+@import "../orderDetail/orderDetail.wxss"

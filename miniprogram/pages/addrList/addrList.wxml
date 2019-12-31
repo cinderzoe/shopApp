@@ -1,0 +1,26 @@
+<!--pages/addrList/addrList.wxml-->
+<view class="addr-list" wx:if="{{addrListInfo.length}}">
+  <view class="list-layout" wx:for="{{addrListInfo}}">
+    <view class="wrap">
+      <view class="list-top">
+        <view class="row row-name">{{item.name}}</view>
+        <view class="row row-mobile">{{item.mobile}}</view>
+        <view class="row row-addr">{{item.address}}</view>
+      </view>
+      <view class="list-bottom clearfix">
+        <view class="default-btn {{item.defaultBtn?'active':''}}" bindtap="setDefault" data-index="{{index}}">{{item.defaultBtn?hasDefault:noDefault}}</view>
+        <view class="handle-btn">
+          <view class="btn edit" bindtap="editAddress" data-index="{{index}}" style="background-image:url(../../images/bianji-2.png)">编辑</view>
+          <view class="btn delete" bindtap="deleteAddress" data-index="{{index}}" style="background-image:url(../../images/lajitong.png)">删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="save-btn" bindtap="addAddr">添加</view>
+</view>
+<view class="no-addr" wx:else>
+  <view class="wrap">
+    <image src="../../images/noaddress.png" mode="widthFix"></image>
+    <view class="save-btn" bindtap="gotoAddr">添加地址</view>
+  </view>
+</view>

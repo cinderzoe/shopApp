@@ -1,0 +1,5 @@
+<!--pages/sortList/sortList.wxml-->
+<import src="../list/list" />
+<view class="sortList">
+  <template is="listTempalte" data="{{listContents}}"/>
+</view>

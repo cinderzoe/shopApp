@@ -1,0 +1,28 @@
+<!--pages/logistics/logistics.wxml-->
+<view class="logistics">
+  <view class="product-info">
+    <view class="wrap">
+      <view class="info-in clearfix">
+        <image class="pro-img" src="{{productImg}}" mode="widthFix"></image>
+        <view class="pro-txt">
+          <view class="status">已签收</view>
+          <view class="orders">
+            <view class="text">承运来源：{{express}}</view>
+            <view class="text">运单编号：{{expressId}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="logistics-info">
+    <view class="wrap">
+      <view class="logistics-list {{index==0?'active':''}}" wx:for="{{logistics}}">
+        <view class="time">
+          <view class="day">{{item.date}}</view>
+          <view class="year">{{item.year}}</view>
+        </view>
+        <view class="info">{{item.status}}</view>
+      </view>
+    </view>
+  </view>
+</view>

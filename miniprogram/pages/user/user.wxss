@@ -1,0 +1,22 @@
+/* pages/user/user.wxss */
+.user-part1{background-color: #FF6248;}
+.user-info{color: #fff;padding: 38rpx 0 54rpx;}
+.info-img{width: 104rpx;height: 104rpx;background-position: center;background-repeat: no-repeat;background-size: cover;margin-left: 20rpx;margin-right: 34rpx;}
+.fl{float: left;}
+.info-name{font-size: 32rpx;line-height: 44rpx;margin-top: 12rpx;}
+.info-mobile{font-size: 28rpx;line-height: 40rpx;}
+.orders{background-color: #fff;padding: 28rpx 0;border-bottom: 1px solid #F1F1F1;border-top-left-radius: 6rpx;border-top-right-radius: 6rpx;}
+.order-txt{font-size: 32rpx;line-height: 44rpx;float: left;padding-left: 22rpx;}
+.order-btn{font-size: 26rpx;line-height: 44rpx;float: right;position: relative;padding-right: 40rpx;}
+.order-btn::after{content: '';display: block;position: absolute;top: 50%;margin-top: -11rpx;right: 14rpx;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAFWC366AAAABGdBTUEAALGPC/xhBQAAAq9JREFUSA2dlb+LE0EUx2+TLBx7kQuchQcabdLIWYgpItyRnyAiZyUeYiFYaeM/kFbsrETsDrxCFFRsrpD8MjGFaBDTCIqKKJjTFEbhPBNJ4mfWzDib23UvDgxv3nvf95333szsTk2Nj2KxOHTYyuXyJduA57HD46dso9IDpDOgG1mvKr1UKr1XiuuiUqlEqtVqzOFsNBomjkWHUSgYVxy79fv9WwpFPt+UwtZvdKWkFLkQ6UO4V+rj0pAG0rE6nc5mMBg8nE6nX0i7qxwOhwHBzP7HJUAxSYMuR128oNscawA/mVeEMeTwoLBNC/E0m81OS58CEfUcYwjnvHROJqGvw/LKNwrgE4AffIGACoC/+AIB3QP890S9IgCuMre8/MoO21WAv5TBawEozxwIv2rmOJiDfovN+2y5Wzm2dD5FnYVneUQAGIrFcbvFwxgMBg0unmkYhmJS6FqtNt/r9T5FIpGZeDz+Q2e3mbi6swJgWdbcOECADZKc5hFtmaYZTSaTH3UGuba3ox/rGGYDgcApHsGGdE4i7ZQgOEfFFru2qP4dGRyYhERgVQOEUq/Xd3W73XVIl+jSBjKby+VeCp/fcBBJ8Kgnd9FPQPiV9h9LpVLPpN9NuhJJIIQhznGNzM5g24T0JG+yLP26/CeRBEJkcHuuIy9i6zFXKPmB9Au5IyI9gBO+DGEe24CSz3PKN/+LSJJCeAfC0+LqMg95PiUZMC4hWMZ2HxIRm6dn9ldwx6XR+EXu2UOCLTK4BsGfH+FoJ18iCBYgeAR+DoLbmUzmLNL+Mow4bOFJRAn7SV/8dfcRWIhGo8uxWKyrB+vrbT0ig93cnSokBwE2wuHwQiKR+K4Hua0VUbPZnGm32wXKOArwNXMPd+WzW5CbzS6NMm6QgfhJtShjiUaKj99E4zfT0UTf8+BzfQAAAABJRU5ErkJggg==);width: 12rpx;height: 22rpx;background-size: cover;background-position: center;background-repeat: no-repeat;}
+.user-part2{background-color: #F5F5F5;padding-bottom: 20rpx;}
+.order-list{background-color: #fff;border-bottom-left-radius: 6rpx;border-bottom-right-radius: 6rpx;display: flex;justify-content:space-around;padding: 32rpx 0;}
+.list-items{text-align: center;font-size: 28rpx;line-height: 40rpx;position: relative;}
+.items-img{width: 58rpx;height: 58rpx;background-size: cover;background-position: center;background-repeat: no-repeat;margin: 0 auto;}
+.items-number{position: absolute;right: -4rpx;top: -6rpx;background-color: #FF6248;color: #fff;line-height: 32rpx;border-radius: 14rpx;min-width: 32rpx;text-align: center;padding: 0 10rpx;box-sizing: border-box;font-size: 20rpx;}
+.items-txt{margin-top: 6rpx;}
+.user-part3{background-color: #fff;}
+.select-items{border-top: 1px solid #F1F1F1;font-size: 28rpx;line-height: 40rpx;padding: 42rpx 0;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAFWC366AAAABGdBTUEAALGPC/xhBQAAAq9JREFUSA2dlb+LE0EUx2+TLBx7kQuchQcabdLIWYgpItyRnyAiZyUeYiFYaeM/kFbsrETsDrxCFFRsrpD8MjGFaBDTCIqKKJjTFEbhPBNJ4mfWzDib23UvDgxv3nvf95333szsTk2Nj2KxOHTYyuXyJduA57HD46dso9IDpDOgG1mvKr1UKr1XiuuiUqlEqtVqzOFsNBomjkWHUSgYVxy79fv9WwpFPt+UwtZvdKWkFLkQ6UO4V+rj0pAG0rE6nc5mMBg8nE6nX0i7qxwOhwHBzP7HJUAxSYMuR128oNscawA/mVeEMeTwoLBNC/E0m81OS58CEfUcYwjnvHROJqGvw/LKNwrgE4AffIGACoC/+AIB3QP890S9IgCuMre8/MoO21WAv5TBawEozxwIv2rmOJiDfovN+2y5Wzm2dD5FnYVneUQAGIrFcbvFwxgMBg0unmkYhmJS6FqtNt/r9T5FIpGZeDz+Q2e3mbi6swJgWdbcOECADZKc5hFtmaYZTSaTH3UGuba3ox/rGGYDgcApHsGGdE4i7ZQgOEfFFru2qP4dGRyYhERgVQOEUq/Xd3W73XVIl+jSBjKby+VeCp/fcBBJ8Kgnd9FPQPiV9h9LpVLPpN9NuhJJIIQhznGNzM5g24T0JG+yLP26/CeRBEJkcHuuIy9i6zFXKPmB9Au5IyI9gBO+DGEe24CSz3PKN/+LSJJCeAfC0+LqMg95PiUZMC4hWMZ2HxIRm6dn9ldwx6XR+EXu2UOCLTK4BsGfH+FoJ18iCBYgeAR+DoLbmUzmLNL+Mow4bOFJRAn7SV/8dfcRWIhGo8uxWKyrB+vrbT0ig93cnSokBwE2wuHwQiKR+K4Hua0VUbPZnGm32wXKOArwNXMPd+WzW5CbzS6NMm6QgfhJtShjiUaKj99E4zfT0UTf8+BzfQAAAABJRU5ErkJggg==);background-size: 14rpx 28rpx;background-repeat: no-repeat;background-position: right center;}
+.select-items .txt{float: left;}
+.select-items .info{float: right;}
+.select-items.select-none{background: none;border-top: none;}

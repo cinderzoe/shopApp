@@ -1,0 +1,18 @@
+/* pages/logistics/logistics.wxss */
+.logistics{height: 100vh;background-color: #fff;}
+.product-info{border-bottom: 20rpx solid #F5F5F5;padding: 30rpx 0;}
+.pro-img{width: 160rpx;float: left;}
+.pro-txt{max-width: 70%;float: left;margin-left: 20rpx;}
+.status{font-size: 34rpx;line-height: 48rpx;color: #FF6248;margin-bottom: 25rpx;}
+.orders{font-size: 26rpx;color: #BCBCBC;}
+.orders .text{padding: 5rpx 0;line-height: 36rpx;}
+.logistics-info{padding: 60rpx 0;}
+.logistics-list{color: #BCBCBC;}
+.logistics-list .time{text-align: right;display: inline-block;line-height: 30rpx;vertical-align: top;padding-right: 52rpx;}
+.logistics-list .time .day{font-size: 34rpx;}
+.logistics-list .time .year{font-size: 22rpx;}
+.logistics-list .info{width: 500rpx;display: inline-block;font-size: 30rpx;line-height: 40rpx;vertical-align: top;padding-left: 44rpx;border-left: 1px solid #F0F0F0;position: relative;padding-bottom: 70rpx;min-height: 80rpx;}
+.logistics-list .info::before{content: '';display: block;width: 22rpx;height: 22rpx;background-color: #BCBCBC;left: -11rpx;top: 8rpx;border-radius: 50%;position: absolute;}
+.logistics-list .info::after{content: '';display: block;width: 10rpx;height: 10rpx;background-color: #fff;position: absolute;top: 15rpx;left: -5rpx;border-radius: 50%;}
+.logistics-list.active{color: #FF6248;}
+.logistics-list.active .info::before{background-color: #FF6248;}

@@ -1,0 +1,10 @@
+/**index.wxss**/
+@import "../list/list.wxss";
+.head_swiper{height: 360rpx;}
+.head_swiper image{width: 100%;height: 100%;}
+.re_title{display: block;overflow: hidden;padding: 20rpx 0;}
+.re_title .tit{font-size: 30rpx;float: left;}
+.re_title .more{font-size: 24rpx;color: #B4B4B4;float: right;}
+.recommend{background-color: #fff;padding-bottom: 20rpx;}
+.recommend.hot{margin-top: 20rpx;padding-top: 20rpx;}
+.bottom_tips{font-size: 20rpx;color: #ABABAB;text-align: center;line-height: 60rpx;}

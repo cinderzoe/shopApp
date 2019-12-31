@@ -1,0 +1,38 @@
+<!--pages/order/order.wxml-->
+<import src="../addAddr/addAddr.wxml" />
+
+<template is="addressInfo" data="{{showAddBtn,buyername,buyermobile,buyeraddress}}"></template>
+
+<view class="order-list">
+  <view class="wrap">
+    <view class="list-arr" wx:for="{{orderProduct.proList}}">
+      <view class="pro-info clearfix">
+        <view class="img" style="background-image:url({{item.img}})"></view>
+        <view class="info">
+          <view class="info-name">{{item.txt}}</view>
+          <view class="info-attr">{{item.attr}}</view>
+          <view class="bottom">
+            <view class="info-prime">￥{{item.unitPrice}}</view>
+            <view class="info-quantity">X{{item.num}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="tips-info">
+        <view class="express-free box clearfix">
+          <view class="box-name">发货方式</view>
+          <view class="box-input">快递 ￥{{item.carryFare}}</view>
+        </view>
+        <view class="leave-word box clearfix">
+          <view class="box-name">客户留言</view>
+          <view class="box-input">
+            <input placeholder="请输入留言" bindinput="inputWord" data-index="{{index}}"></input>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom-nav">
+  <view class="pay-btn" bindtap="gotopay">去支付</view>
+  <view class="pay-prime">总价:￥{{totalPrime}}</view>
+</view>

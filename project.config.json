@@ -40,6 +40,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 27,
 			"list": [
@@ -235,6 +239,13 @@
 					"id": -1,
 					"name": "pages/closedOrder/closedOrder",
 					"pathName": "pages/closedOrder/closedOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]

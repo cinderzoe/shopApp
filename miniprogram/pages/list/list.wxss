@@ -3,6 +3,6 @@
 .list{width: 335rpx;margin-bottom: 26rpx;}
 .list_img{border-radius: 16rpx;}
 .list_img image{width: 100%;height: 400rpx;}
-.list_txt{font-size: 26rpx;color: #666666;line-height: 36rpx;margin: 18rpx 0 14rpx;}
+.list_txt{font-size: 26rpx;color: #666666;line-height: 36rpx;margin: 18rpx 0 14rpx;height: 72rpx;overflow: hidden;}
 .list_prime{float: left;color: #FF6248;font-size: 30rpx;line-height: 42rpx;}
 .list_sales{float: right;color: #ABABAB;font-size: 24rpx;line-height: 42rpx;}

@@ -1,4 +1,5 @@
 //index.js
+const db=wx.cloud.database();
 const app = getApp()
 
 Page({
@@ -11,35 +12,33 @@ Page({
     headDots:true,
     dotColor: "rgba(192,164,91,0.5)",
     dotActiveColor: "rgba(192,164,91,1)",
-    listContentsPublic: [ //人气推荐列表
-      { "src": "../../images/Rectangle_2.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_3.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_2.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_3.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" }
-    ],
-    listContentsHot: [ //热销榜单列表
-      { "src": "../../images/Rectangle_2.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_3.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_2.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_3.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_2.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_3.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_2.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" },
-      { "src": "../../images/Rectangle_3.png", "txt": "这是一件衣服这是一件衣服这是一件衣服", "prime": "300.00", "sales": "110" }
-    ],
+    listContentsPublic:[],//人气推荐列表
+    listContentsHot: [],//热销榜单列表
+    yunImage:[]
   },
 
   onLoad: function() {
-    if (!wx.cloud) {
-      wx.redirectTo({
-        url: '../chooseLib/chooseLib',
-      })
-      return
-    }
+    var _this=this
+    wx.request({
+      //项目的真正接口，通过字符串拼接方式实现
+      url: 'http://www.lazyzoe.cn:3000/shopInfoGet',
+      method: 'GET',
+      success: function (res) {
+        //参数值为res.data,直接将返回的数据传入
+        console.log(res.data)
+        _this.setData({
+          listContentsPublic: res.data,
+          listContentsHot:res.data
+        })
+      },
+      fail: function () {
+        doFail();
+      },
+    })
   },
   gotoProDetail: function () {
     wx.navigateTo({
       url: '../productDetail/productDetail',
     })
-  }
+  },
 })
